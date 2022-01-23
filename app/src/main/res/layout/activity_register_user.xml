@@ -150,7 +150,7 @@
             <EditText
                 android:id="@+id/addressEt"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="80dp"
                 android:layout_below="@+id/addressL1"
                 android:layout_marginLeft="13dp"
                 android:layout_marginRight="13dp"
