@@ -226,13 +226,13 @@
                 android:id="@+id/registerSellerTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/registerBtn"
                 android:layout_centerHorizontal="true"
-                android:textColor="#868686"
-                android:text="Are you a seller? Register as Seller"
-                android:textStyle="bold"
+                android:layout_marginTop="5dp"
                 android:background="@null"
-                android:layout_marginTop="20dp"
-                android:layout_below="@id/registerBtn" />
+                android:text="Are you a seller? Register as Seller"
+                android:textColor="#868686"
+                android:textStyle="bold" />
 
         </RelativeLayout>
 
