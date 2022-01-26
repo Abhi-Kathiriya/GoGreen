@@ -15,11 +15,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GoGreen">
-        <activity android:name=".RegisterSellerActivity"></activity>
+        <activity
+            android:name=".MainSellerActivity"
+            android:exported="true" />
+        <activity android:name=".RegisterSellerActivity" />
         <activity android:name=".RegisterUserActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".NextActivity">
+        <activity android:name=".NextActivity"
+            android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
