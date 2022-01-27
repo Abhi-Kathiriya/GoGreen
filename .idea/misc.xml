@@ -6,10 +6,15 @@
         <entry key="..\:/Users/renil/AndroidStudioProjects/GoGreen/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
         <entry key="..\:/Users/renil/AndroidStudioProjects/GoGreen/app/src/main/res/drawable-v24/ic_logout_white.xml" value="0.2703125" />
         <entry key="..\:/Users/renil/AndroidStudioProjects/GoGreen/app/src/main/res/drawable/grdbtn1.xml" value="0.2703125" />
+        <entry key="..\:/Users/renil/AndroidStudioProjects/GoGreen/app/src/main/res/drawable/ic_baseline_description_24.xml" value="0.2703125" />
         <entry key="..\:/Users/renil/AndroidStudioProjects/GoGreen/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.2703125" />
         <entry key="..\:/Users/renil/AndroidStudioProjects/GoGreen/app/src/main/res/drawable/ic_baseline_star_border_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/renil/AndroidStudioProjects/GoGreen/app/src/main/res/drawable/ic_cart_gray.xml" value="0.2703125" />
+        <entry key="..\:/Users/renil/AndroidStudioProjects/GoGreen/app/src/main/res/drawable/ic_categories_gray.xml" value="0.2703125" />
+        <entry key="..\:/Users/renil/AndroidStudioProjects/GoGreen/app/src/main/res/drawable/ic_down_gray.xml" value="0.2703125" />
         <entry key="..\:/Users/renil/AndroidStudioProjects/GoGreen/app/src/main/res/drawable/ic_location_gray.xml" value="0.2703125" />
         <entry key="..\:/Users/renil/AndroidStudioProjects/GoGreen/app/src/main/res/drawable/ic_lock_gray.xml" value="0.2703125" />
+        <entry key="..\:/Users/renil/AndroidStudioProjects/GoGreen/app/src/main/res/drawable/ic_title_gray.xml" value="0.2703125" />
         <entry key="..\:/Users/renil/AndroidStudioProjects/GoGreen/app/src/main/res/drawable/row_product_bck.xml" value="0.2703125" />
         <entry key="..\:/Users/renil/AndroidStudioProjects/GoGreen/app/src/main/res/drawable/shape_rect01.xml" value="0.2703125" />
         <entry key="..\:/Users/renil/AndroidStudioProjects/GoGreen/app/src/main/res/drawable/shape_rect02.xml" value="0.2703125" />
@@ -17,10 +22,12 @@
         <entry key="..\:/Users/renil/AndroidStudioProjects/GoGreen/app/src/main/res/drawable/shape_rect04.xml" value="0.2703125" />
         <entry key="..\:/Users/renil/AndroidStudioProjects/GoGreen/app/src/main/res/drawable/shape_rect05.xml" value="0.2703125" />
         <entry key="..\:/Users/renil/AndroidStudioProjects/GoGreen/app/src/main/res/drawable/shape_rect06.xml" value="0.2703125" />
+        <entry key="..\:/Users/renil/AndroidStudioProjects/GoGreen/app/src/main/res/layout/activity_add_product.xml" value="0.264" />
         <entry key="..\:/Users/renil/AndroidStudioProjects/GoGreen/app/src/main/res/layout/activity_login.xml" value="0.16893115942028986" />
         <entry key="..\:/Users/renil/AndroidStudioProjects/GoGreen/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/renil/AndroidStudioProjects/GoGreen/app/src/main/res/layout/activity_main_seller.xml" value="0.264" />
         <entry key="..\:/Users/renil/AndroidStudioProjects/GoGreen/app/src/main/res/layout/activity_next.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/renil/AndroidStudioProjects/GoGreen/app/src/main/res/layout/activity_profile_edit_seller.xml" value="0.264" />
         <entry key="..\:/Users/renil/AndroidStudioProjects/GoGreen/app/src/main/res/layout/activity_register_seller.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/renil/AndroidStudioProjects/GoGreen/app/src/main/res/layout/activity_register_user.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/renil/AndroidStudioProjects/GoGreen/app/src/main/res/layout/row_product_seller.xml" value="0.264" />
