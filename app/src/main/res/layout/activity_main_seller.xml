@@ -116,7 +116,7 @@
 
     <!--products-->
     <RelativeLayout
-        android:visibility="gone"
+        android:visibility="visible"
         android:id="@+id/productsRl"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -174,26 +174,30 @@
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/row_product_seller" />
 
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/productsRv">
+
         <Button
             android:id="@+id/addProductBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/productsRv"
             android:layout_centerHorizontal="true"
             android:background="@drawable/btnbackground"
             android:paddingBottom="8dp"
             android:text="Add Product"
             android:textAllCaps="false"
             android:textColor="#ffffff"
-            android:textSize="15sp">
-
-        </Button>
+            android:textSize="15sp"/>
+        </RelativeLayout>
 
     </RelativeLayout>
 
     <!--orders-->
     <RelativeLayout
-        android:visibility="visible"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/ordersRl"

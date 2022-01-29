@@ -19,6 +19,8 @@
             android:layout_height="100dp"
             android:layout_centerVertical="true"
             android:adjustViewBounds="true"
+            android:scaleX="1"
+            android:scaleY="1.5"
             android:scaleType="fitCenter"
             android:src="@drawable/plant"
             android:layout_marginRight="5dp" />

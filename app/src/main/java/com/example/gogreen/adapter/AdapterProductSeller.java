@@ -6,6 +6,8 @@ import android.graphics.Paint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,6 +24,7 @@ public class AdapterProductSeller extends RecyclerView.Adapter<AdapterProductSel
 
     private Context context;
     public ArrayList<ModelProduct> productList;
+    public int lastPosition = -1;
 
     public AdapterProductSeller(Context context, ArrayList<ModelProduct> productList) {
         this.context = context;
@@ -52,6 +55,12 @@ public class AdapterProductSeller extends RecyclerView.Adapter<AdapterProductSel
         String title = modelProduct.getProductTitle();
         String timestamp = modelProduct.getTimestamp();
         String originalPrice = modelProduct.getOriginalPrice();
+
+        if(position > lastPosition) {
+            Animation animation = AnimationUtils.loadAnimation(context, android.R.anim.slide_in_left);
+            holder.itemView.startAnimation(animation);
+            lastPosition = position;
+        }
 
         //set data
         holder.titleTv.setText(title);
