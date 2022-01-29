@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
-    tools:context=".RegisterSellerActivity">
+    tools:context=".activities.RegisterSellerActivity">
 
     <!--Toolbar-->
     <RelativeLayout
@@ -68,7 +68,7 @@
             <EditText
                 android:id="@+id/nameEt"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="47dp"
                 android:layout_below="@+id/profileIv"
                 android:layout_marginLeft="13dp"
                 android:layout_marginTop="17dp"
@@ -89,10 +89,10 @@
                 android:textColorHint="#868686"
                 android:drawablePadding="5dp"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="47dp"
                 android:layout_marginLeft="13dp"
                 android:layout_marginRight="13dp"
-                android:layout_marginTop="17dp"
+                android:layout_marginTop="10dp"
                 android:inputType="text"
                 android:background="@drawable/shape_rect02"
                 android:drawableLeft="@drawable/ic_store_gray" />
@@ -105,7 +105,7 @@
                 android:drawablePadding="5dp"
                 android:textColorHint="#868686"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="47dp"
                 android:layout_marginLeft="13dp"
                 android:layout_marginRight="13dp"
                 android:layout_marginTop="10dp"
@@ -121,7 +121,7 @@
                 android:drawablePadding="5dp"
                 android:textColorHint="#868686"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="47dp"
                 android:layout_marginLeft="13dp"
                 android:layout_marginRight="13dp"
                 android:layout_marginTop="10dp"
@@ -139,7 +139,7 @@
                 <EditText
                     android:id="@+id/countryEt"
                     android:layout_width="wrap_content"
-                    android:layout_height="50dp"
+                    android:layout_height="47dp"
                     android:layout_below="@+id/nameEt"
                     android:layout_marginLeft="13dp"
                     android:layout_marginRight="13dp"
@@ -156,7 +156,7 @@
                 <EditText
                     android:id="@+id/stateEt"
                     android:layout_width="wrap_content"
-                    android:layout_height="50dp"
+                    android:layout_height="47dp"
                     android:layout_below="@+id/nameEt"
                     android:layout_marginRight="13dp"
                     android:layout_marginTop="10dp"
@@ -171,7 +171,7 @@
                 <EditText
                     android:id="@+id/cityEt"
                     android:layout_width="wrap_content"
-                    android:layout_height="50dp"
+                    android:layout_height="47dp"
                     android:layout_below="@+id/nameEt"
                     android:background="@drawable/shape_rect02"
                     android:layout_weight="1"
@@ -207,7 +207,7 @@
                 android:padding="10dp"
                 android:drawablePadding="5dp"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="47dp"
                 android:layout_marginLeft="13dp"
                 android:layout_marginRight="13dp"
                 android:textColorHint="#868686"
@@ -223,7 +223,7 @@
                 android:padding="10dp"
                 android:drawablePadding="5dp"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="47dp"
                 android:layout_marginLeft="13dp"
                 android:layout_marginRight="13dp"
                 android:layout_marginTop="10dp"
@@ -238,7 +238,7 @@
                 android:padding="10dp"
                 android:drawablePadding="5dp"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="47dp"
                 android:layout_marginLeft="13dp"
                 android:layout_marginRight="13dp"
                 android:layout_marginTop="10dp"

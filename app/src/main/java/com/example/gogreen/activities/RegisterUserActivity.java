@@ -1,4 +1,4 @@
-package com.example.gogreen;
+package com.example.gogreen.activities;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -8,7 +8,6 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.Context;
@@ -33,6 +32,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.gogreen.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;

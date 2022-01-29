@@ -16,20 +16,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GoGreen">
         <activity
-            android:name=".ProfileEditSellerActivity"
+            android:name=".activities.ProfileEditSellerActivity"
             android:exported="false" />
         <activity
-            android:name=".AddProductActivity"
+            android:name=".activities.AddProductActivity"
             android:exported="false" />
         <activity
-            android:name=".MainSellerActivity"
+            android:name=".activities.MainSellerActivity"
             android:exported="true" />
-        <activity android:name=".RegisterSellerActivity" />
-        <activity android:name=".RegisterUserActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".activities.RegisterSellerActivity" />
+        <activity android:name=".activities.RegisterUserActivity" />
+        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.MainActivity" />
         <activity
-            android:name=".NextActivity"
+            android:name=".activities.NextActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

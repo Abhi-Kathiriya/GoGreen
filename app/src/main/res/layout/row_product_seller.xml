@@ -34,10 +34,11 @@
             <TextView
                 android:id="@+id/discountedNoteTv"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="23dp"
                 android:background="@drawable/shape_rect05"
-                android:padding="5dp"
+                android:padding="4dp"
                 android:text="10% OFF"
+                android:textSize="12sp"
                 android:textColor="#43A047" />
 
             <TextView
@@ -87,7 +88,7 @@
             android:scaleType="fitCenter"
             android:layout_centerVertical="true"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="15dp"
             android:src="@drawable/arrowfigma"
             android:layout_alignParentRight="true"
             android:layout_marginRight="10dp" />

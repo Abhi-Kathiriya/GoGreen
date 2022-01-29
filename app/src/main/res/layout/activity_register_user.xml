@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
-    tools:context=".RegisterUserActivity">
+    tools:context=".activities.RegisterUserActivity">
 
     <!--Toolbar-->
     <RelativeLayout
@@ -72,7 +72,7 @@
                 android:padding="10dp"
                 android:drawablePadding="5dp"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="47dp"
                 android:layout_marginLeft="13dp"
                 android:layout_marginRight="13dp"
                 android:layout_marginTop="17dp"
@@ -87,7 +87,7 @@
                 android:padding="10dp"
                 android:drawablePadding="5dp"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="47dp"
                 android:layout_marginLeft="13dp"
                 android:layout_marginRight="13dp"
                 android:layout_marginTop="10dp"
@@ -105,7 +105,7 @@
                 <EditText
                     android:id="@+id/countryEt"
                     android:layout_width="wrap_content"
-                    android:layout_height="50dp"
+                    android:layout_height="47dp"
                     android:layout_below="@+id/nameEt"
                     android:layout_marginLeft="13dp"
                     android:layout_marginRight="13dp"
@@ -121,7 +121,7 @@
                 <EditText
                     android:id="@+id/stateEt"
                     android:layout_width="wrap_content"
-                    android:layout_height="50dp"
+                    android:layout_height="47dp"
                     android:layout_below="@+id/nameEt"
                     android:layout_marginRight="13dp"
                     android:layout_marginTop="10dp"
@@ -135,7 +135,7 @@
                 <EditText
                     android:id="@+id/cityEt"
                     android:layout_width="wrap_content"
-                    android:layout_height="50dp"
+                    android:layout_height="47dp"
                     android:layout_below="@+id/nameEt"
                     android:background="@drawable/shape_rect02"
                     android:layout_weight="1"
@@ -169,7 +169,7 @@
                 android:padding="10dp"
                 android:drawablePadding="5dp"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="47dp"
                 android:layout_marginLeft="13dp"
                 android:layout_marginRight="13dp"
                 android:layout_marginTop="10dp"
@@ -184,7 +184,7 @@
                 android:padding="10dp"
                 android:drawablePadding="5dp"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="47dp"
                 android:layout_marginLeft="13dp"
                 android:layout_marginRight="13dp"
                 android:layout_marginTop="10dp"
@@ -198,7 +198,7 @@
                 android:padding="10dp"
                 android:drawablePadding="5dp"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="47dp"
                 android:layout_marginLeft="13dp"
                 android:layout_marginRight="13dp"
                 android:layout_marginTop="10dp"
