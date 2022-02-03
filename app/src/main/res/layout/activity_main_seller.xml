@@ -168,9 +168,7 @@
             android:layout_width="match_parent"
             android:layout_height="450dp"
             android:layout_below="@+id/filteredProductsTv"
-            android:layout_marginStart="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginBottom="5dp"
+            android:layout_margin="5dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/row_product_seller" />
 
