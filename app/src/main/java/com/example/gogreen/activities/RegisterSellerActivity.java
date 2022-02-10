@@ -576,4 +576,5 @@ public class RegisterSellerActivity extends AppCompatActivity implements Locatio
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
+
 }

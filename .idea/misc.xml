@@ -3,6 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/SEM-6/SGP/GoGreen/app/src/main/res/layout/activity_add_product.xml" value="0.20416666666666666" />
+        <entry key="..\:/SEM-6/SGP/GoGreen/app/src/main/res/layout/activity_edit_product.xml" value="0.2" />
+        <entry key="..\:/SEM-6/SGP/GoGreen/app/src/main/res/layout/activity_edit_profile_seller.xml" value="0.20416666666666666" />
+        <entry key="..\:/SEM-6/SGP/GoGreen/app/src/main/res/layout/activity_main_seller.xml" value="0.20416666666666666" />
+        <entry key="..\:/SEM-6/SGP/GoGreen/app/src/main/res/layout/activity_main_user.xml" value="0.25" />
+        <entry key="..\:/SEM-6/SGP/GoGreen/app/src/main/res/layout/activity_profile_edit_seller.xml" value="0.20416666666666666" />
+        <entry key="..\:/SEM-6/SGP/GoGreen/app/src/main/res/layout/activity_register_seller.xml" value="0.20416666666666666" />
+        <entry key="..\:/SEM-6/SGP/GoGreen/app/src/main/res/layout/row_product_seller.xml" value="0.20416666666666666" />
+        <entry key="..\:/SEM-6/SGP/GoGreen/app/src/main/res/layout/row_shop.xml" value="0.22" />
         <entry key="..\:/Users/renil/AndroidStudioProjects/GoGreen/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
         <entry key="..\:/Users/renil/AndroidStudioProjects/GoGreen/app/src/main/res/drawable-v24/ic_logout_white.xml" value="0.2703125" />
         <entry key="..\:/Users/renil/AndroidStudioProjects/GoGreen/app/src/main/res/drawable/grdbtn1.xml" value="0.2703125" />

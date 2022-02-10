@@ -19,39 +19,39 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
+            android:layout_toRightOf="@id/profileIv"
             android:text="Shop Name"
             android:textColor="#ffffff"
             android:textSize="17sp"
-            android:textStyle="bold"
-            android:layout_toRightOf="@id/profileIv" />
+            android:textStyle="bold" />
 
         <ImageButton
             android:id="@+id/logoutBtn"
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:layout_alignParentRight="true"
             android:background="@null"
-            android:src="@drawable/ic_logout_white"
-            android:layout_alignParentRight="true" />
+            android:src="@drawable/ic_logout_white" />
 
         <ImageButton
             android:id="@+id/reviewBtn"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:background="@null"
-            android:src="@drawable/ic_baseline_star_border_24"
             android:layout_marginRight="3dp"
-            android:layout_toLeftOf="@id/logoutBtn" />
+            android:layout_toLeftOf="@id/logoutBtn"
+            android:background="@null"
+            android:src="@drawable/ic_baseline_star_border_24" />
 
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profileIv"
             android:layout_width="70dp"
             android:layout_height="70dp"
+            android:layout_marginRight="10dp"
             android:src="@drawable/person"
             app:civ_border_color="#FFFFFF"
             app:civ_border_width="2dp"
-            app:civ_circle_background_color="#ffffff"
-            android:layout_marginRight="10dp" />
+            app:civ_circle_background_color="#ffffff" />
 
 
         <TextView
@@ -59,18 +59,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/shopNameTv"
+            android:layout_toRightOf="@id/profileIv"
             android:text="Name"
-            android:textColor="#ffffff"
-            android:layout_toRightOf="@id/profileIv" />
+            android:textColor="#ffffff" />
 
         <TextView
             android:id="@+id/emailTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/nameTv"
+            android:layout_toRightOf="@id/profileIv"
             android:text="Email"
-            android:textColor="#ffffff"
-            android:layout_toRightOf="@id/profileIv" />
+            android:textColor="#ffffff" />
 
 
     </RelativeLayout>
@@ -168,7 +168,12 @@
             android:layout_width="match_parent"
             android:layout_height="450dp"
             android:layout_below="@+id/filteredProductsTv"
-            android:layout_margin="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/row_product_seller" />
 
