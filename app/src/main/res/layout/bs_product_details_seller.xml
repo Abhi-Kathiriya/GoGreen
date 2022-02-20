@@ -48,8 +48,8 @@
             android:gravity="center"
             android:layout_marginTop="18dp"
             android:text="Product Details"
-            android:textSize="21sp"
-            android:background="#008800"
+            android:textSize="18sp"
+            android:background="@drawable/shape_rect04"
             android:textStyle="bold"
             android:textColor="#ffffff"/>
 
@@ -145,7 +145,7 @@
                 android:layout_height="wrap_content"
                 android:text="₹10"
                 android:textSize="20sp"
-                android:textColor="#008800"
+                android:textColor="@color/colorPrimaryDark"
                 android:layout_marginRight="10dp" />
 
             <TextView
@@ -153,7 +153,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="₹20"
-                android:textColor="#008800"
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="20sp"
                 android:layout_toRightOf="@+id/discountedPriceTv"
                 android:layout_marginRight="10dp" />

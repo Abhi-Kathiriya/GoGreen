@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:padding="10dp"
-        android:background="#008800"
+        android:background="@color/colorPrimaryDark"
         tools:ignore="MissingClass">
 
         <ImageButton
@@ -29,9 +29,9 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:text="Register Seller"
-            android:layout_marginTop="13dp"
+            android:layout_marginTop="17dp"
             android:textStyle="bold"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textColor="@color/colorWhite" />
 
         <ImageButton
@@ -255,13 +255,12 @@
                 android:layout_below="@+id/cpasswordEt"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/btnbackground"
+                android:background="@drawable/backgroundbtn"
                 android:minWidth="120dp"
-                android:paddingBottom="9dp"
                 android:text="Register"
                 android:textAllCaps="false"
                 android:textColor="#ffffff"
-                android:textSize="20sp" />
+                android:textSize="16sp" />
 
         </RelativeLayout>
 

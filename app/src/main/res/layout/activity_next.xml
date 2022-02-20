@@ -15,10 +15,10 @@
         android:src="@drawable/next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
-
 
     <TextView
         android:id="@+id/textView1"
@@ -79,16 +79,29 @@
         app:layout_constraintVertical_bias="0.32"
         tools:ignore="MissingConstraints" />
 
+
+    <ProgressBar
+        android:id="@+id/progress_circular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="#0DC60D"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.764"
+        tools:ignore="MissingConstraints" />
+
     <Button
         android:id="@+id/shopnowBtn"
         android:layout_width="322dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/btnbackground"
+        android:background="@drawable/backgroundbtn"
         android:textAllCaps="false"
-        android:paddingBottom="8dp"
         android:text="Get Started"
         android:textColor="@color/white"
-        android:textSize="18dp"
+        android:textSize="16dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

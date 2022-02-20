@@ -11,14 +11,14 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:padding="10dp"
-        android:background="#008800">
+        android:background="@color/colorPrimaryDark">
 
         <ImageButton
             android:id="@+id/backBtn"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginTop="6dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="15dp"
             android:background="@null"
             android:src="@drawable/ic_back_iwhite" />
 
@@ -29,7 +29,7 @@
             android:layout_marginTop="6dp"
             android:text="Edit Product"
             android:textColor="#ffffff"
-            android:textSize="22sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
     </RelativeLayout>
@@ -162,13 +162,12 @@
             android:layout_below="@id/discountedNoteEt"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
-            android:background="@drawable/btnbackground"
+            android:background="@drawable/backgroundbtn"
             android:minWidth="150dp"
-            android:paddingBottom="9dp"
             android:text="Update"
             android:textAllCaps="false"
             android:textColor="#ffffff"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
     </RelativeLayout>
 </LinearLayout>

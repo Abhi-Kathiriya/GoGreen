@@ -2,6 +2,7 @@ package com.example.gogreen.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.AlertDialog;
@@ -10,6 +11,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AnimationUtils;
+import android.view.animation.LayoutAnimationController;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -21,6 +24,7 @@ import com.example.gogreen.R;
 import com.example.gogreen.Constants;
 import com.example.gogreen.adapter.AdapterProductSeller;
 import com.example.gogreen.models.ModelProduct;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -32,6 +36,8 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
+import static androidx.recyclerview.widget.GridLayoutManager.*;
+
 public class MainSellerActivity extends AppCompatActivity {
 
     private ImageButton logoutBtn,filterProductBtn,reviewsBtn,filterOrderBtn;
@@ -40,7 +46,7 @@ public class MainSellerActivity extends AppCompatActivity {
     private RelativeLayout productsRl,ordersRl;
     private EditText searchProductEt;
     private RecyclerView productsRv,ordersRv;
-    private Button addProductBtn;
+    private FloatingActionButton addProductBtn;
 
     private FirebaseAuth firebaseAuth;
     private ProgressDialog progressDialog;
@@ -87,9 +93,27 @@ public class MainSellerActivity extends AppCompatActivity {
         logoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //sign out
-                firebaseAuth.signOut();
-                checkUser();
+
+                AlertDialog.Builder builder =new AlertDialog.Builder(MainSellerActivity.this);
+                builder.setTitle("Alert !")
+                        .setMessage("Are you sure you want to logout?")
+                        .setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                //sign out
+                                firebaseAuth.signOut();
+                                checkUser();
+                            }
+                        })
+                        .setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                //cancel, dismiss dialog
+                                dialog.dismiss();
+                            }
+                        })
+                        .show();
+
             }
         });
 
@@ -212,6 +236,10 @@ public class MainSellerActivity extends AppCompatActivity {
                         //setup adapter
                         adapterProductSeller = new AdapterProductSeller(MainSellerActivity.this, productList);
                         //set adapter
+                        LayoutAnimationController controller = AnimationUtils.loadLayoutAnimation(productsRv.getContext(),
+                                R.anim.layout_fall_down);
+                        productsRv.setLayoutAnimation(controller);
+                        productsRv.setLayoutManager(new GridLayoutManager(MainSellerActivity.this,2,GridLayoutManager.VERTICAL,false));
                         productsRv.setAdapter(adapterProductSeller);
                     }
 
@@ -239,6 +267,10 @@ public class MainSellerActivity extends AppCompatActivity {
                         //setup adapter
                         adapterProductSeller = new AdapterProductSeller(MainSellerActivity.this, productList);
                         //set adapter
+                        LayoutAnimationController controller = AnimationUtils.loadLayoutAnimation(productsRv.getContext(),
+                                R.anim.layout_fall_down);
+                        productsRv.setLayoutAnimation(controller);
+                        productsRv.setLayoutManager(new GridLayoutManager(MainSellerActivity.this,2,GridLayoutManager.VERTICAL,false));
                         productsRv.setAdapter(adapterProductSeller);
                     }
                     @Override

@@ -37,7 +37,7 @@ public class AdapterProductSeller extends RecyclerView.Adapter<AdapterProductSel
 
     private Context context;
     public ArrayList<ModelProduct> productList;
-    public int lastPosition = -1;
+    //public int lastPosition = -1;
 
     public AdapterProductSeller(Context context, ArrayList<ModelProduct> productList) {
         this.context = context;
@@ -69,11 +69,11 @@ public class AdapterProductSeller extends RecyclerView.Adapter<AdapterProductSel
         String timestamp = modelProduct.getTimestamp();
         String originalPrice = modelProduct.getOriginalPrice();
 
-        if(position > lastPosition) {
-            Animation animation = AnimationUtils.loadAnimation(context, android.R.anim.slide_in_left);
-            holder.itemView.startAnimation(animation);
-            lastPosition = position;
-        }
+//        if(position > lastPosition) {
+//            Animation animation = AnimationUtils.loadAnimation(context, android.R.anim.slide_in_left);
+//            holder.itemView.startAnimation(animation);
+//            lastPosition = position;
+//        }
 
         //set data
         holder.titleTv.setText(title);
@@ -189,7 +189,7 @@ public class AdapterProductSeller extends RecyclerView.Adapter<AdapterProductSel
                 //show delete confirm
                 AlertDialog.Builder builder =new AlertDialog.Builder(context);
                 builder.setTitle("Delete")
-                        .setMessage("Are you sure you want to delete product" + title+ " ?")
+                        .setMessage("Are you sure you want to delete product" + title + " ?")
                         .setPositiveButton("DELETE", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {

@@ -5,50 +5,38 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:elevation="10dp"
     android:background="@drawable/row_product_bck"
+    android:padding="5dp"
     android:layout_margin="7dp">
 
 
     <RelativeLayout
         android:padding="5dp"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/productIconIv"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_centerVertical="true"
-            android:adjustViewBounds="true"
-            android:scaleX="1"
-            android:scaleY="1.5"
-            android:scaleType="fitCenter"
-            android:src="@drawable/plant"
-            android:layout_marginRight="5dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/productIconIv"
-            android:orientation="vertical"
-            android:paddingLeft="10dp">
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/discountedNoteTv"
-                android:layout_width="wrap_content"
-                android:layout_height="23dp"
-                android:background="@drawable/shape_rect05"
-                android:padding="4dp"
-                android:text="10% OFF"
-                android:textColor="#43A047"
-                android:textSize="12sp" />
+            <ImageView
+                android:id="@+id/productIconIv"
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:layout_marginTop="7dp"
+                android:adjustViewBounds="true"
+                android:layout_gravity="center"
+                android:src="@drawable/plant" />
 
             <TextView
                 android:id="@+id/titleTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="15dp"
                 android:text="Title"
+                android:textStyle="bold"
                 android:textColor="#000" />
 
             <TextView
@@ -56,12 +44,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Qty : 8"
+                android:layout_marginTop="2dp"
                 android:textColor="#000" />
 
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp">
+                android:layout_marginTop="2dp">
 
                 <TextView
                     android:id="@+id/discountedPriceTv"
@@ -69,31 +58,33 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:text="₹350"
+                    android:paddingTop="4dp"
                     android:textColor="#959595" />
 
                 <TextView
                     android:id="@+id/originalPriceTv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingTop="4dp"
                     android:layout_toRightOf="@+id/discountedPriceTv"
                     android:text="₹400"
                     android:textColor="#959595" />
 
+                <TextView
+                    android:id="@+id/discountedNoteTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10% OFF"
+                    android:padding="4dp"
+                    android:background="@drawable/shape_rect05"
+                    android:textColor="#43A047"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@+id/originalPriceTv"/>
 
             </RelativeLayout>
 
         </LinearLayout>
-
-        <ImageView
-            android:id="@+id/nextIv"
-            android:adjustViewBounds="true"
-            android:scaleType="fitCenter"
-            android:layout_centerVertical="true"
-            android:layout_width="wrap_content"
-            android:layout_height="15dp"
-            android:src="@drawable/arrowfigma"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="10dp" />
 
     </RelativeLayout>
 

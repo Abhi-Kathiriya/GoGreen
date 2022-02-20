@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.gogreen.R;
@@ -26,6 +27,7 @@ public class NextActivity extends AppCompatActivity {
     private TextView textView1,textView2,textView3,textView4;
     private Button shopnowBtn;
     Animation fade_in_anim;
+    private ProgressBar progressBar;
     private FirebaseAuth firebaseAuth;
 
     @Override
@@ -37,6 +39,7 @@ public class NextActivity extends AppCompatActivity {
 
         shopnowBtn = findViewById(R.id.shopnowBtn);
 
+        progressBar = findViewById(R.id.progress_circular);
         textView1 = findViewById(R.id.textView1);
         textView2 = findViewById(R.id.textView2);
         textView3 = findViewById(R.id.textView3);
@@ -54,15 +57,17 @@ public class NextActivity extends AppCompatActivity {
             }
         }, 2000);
 
+        progressBar.setVisibility(View.GONE);
         shopnowBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
-
+                progressBar.setVisibility(View.VISIBLE);
                 if(user==null){
                     //user not logged in start login activity
                     startActivity(new Intent(NextActivity.this,LoginActivity.class));
                     finish();
+                    progressBar.setVisibility(View.GONE);
                 }
                 else {
                     //user is logged in, check user type
@@ -88,11 +93,13 @@ public class NextActivity extends AppCompatActivity {
                                 //user is seller
                                 startActivity(new Intent(NextActivity.this,MainSellerActivity.class));
                                 finish();
+                                progressBar.setVisibility(View.GONE);
                             }
                             else{
                                 //user is buyer
-                                startActivity(new Intent(NextActivity.this, MainActivity.class));
+                                startActivity(new Intent(NextActivity.this, MainUserActivity.class));
                                 finish();
+                                progressBar.setVisibility(View.GONE);
 
                             }
                         }
