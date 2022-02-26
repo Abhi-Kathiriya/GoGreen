@@ -21,7 +21,7 @@
         android:layout_marginTop="15dp"
         android:id="@+id/layout5"
         android:elevation="10dp"
-        android:padding="7dp"
+        android:padding="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/shape_rect08">
@@ -93,7 +93,7 @@
             android:orientation="horizontal"
             android:layout_below="@id/emailTv"
             android:layout_marginLeft="35dp"
-            android:layout_marginTop="17dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="35dp"
             android:layout_marginBottom="12dp"
             android:id="@+id/productLl">
@@ -139,13 +139,13 @@
             android:id="@+id/searchProductEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
+            android:layout_marginLeft="12dp"
             android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
             android:background="@drawable/shape_rect06"
             android:drawablePadding="10dp"
-            android:elevation="5dp"
+            android:elevation="10dp"
             android:hint="Search Here..."
             android:padding="8dp"
             android:layout_toLeftOf="@+id/filterProductBtn"
@@ -158,19 +158,20 @@
             android:layout_marginTop="5dp"
             android:background="@null"
             android:scaleType="fitXY"
+            android:elevation="10dp"
             android:src="@drawable/filterbtn"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="5dp" />
+            android:layout_marginRight="12dp" />
 
         <TextView
             android:id="@+id/filteredProductsTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/searchProductEt"
-            android:layout_marginBottom="5dp"
+            android:layout_marginBottom="3dp"
             android:text="Showing All"
             android:textColor="#000"
-            android:layout_marginLeft="12dp" />
+            android:layout_marginLeft="13dp" />
 
 
         <!--ShowProductList-->
@@ -181,20 +182,13 @@
             android:layout_below="@+id/filteredProductsTv"
             android:layout_marginStart="5dp"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="3dp"
             android:layout_marginEnd="5dp"
             android:layout_marginRight="5dp"
             android:layout_marginBottom="5dp"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             tools:listitem="@layout/row_product_seller" />
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/productsRv">
-
-        </RelativeLayout>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/addProductBtn"
@@ -202,6 +196,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:backgroundTint="#4B9E18"
+            android:elevation="10dp"
             android:paddingBottom="8dp"
             android:src="@drawable/ic_baseline_add_24"
             android:layout_alignParentBottom="true"

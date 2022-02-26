@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -19,6 +21,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.gogreen.FilterProduct;
 import com.example.gogreen.R;
 import com.example.gogreen.activities.EditProductActivity;
 import com.example.gogreen.activities.MainSellerActivity;
@@ -33,15 +36,18 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-public class AdapterProductSeller extends RecyclerView.Adapter<AdapterProductSeller.HolderProductSeller> {
+public class AdapterProductSeller extends RecyclerView.Adapter<AdapterProductSeller.HolderProductSeller> implements Filterable {
 
     private Context context;
     public ArrayList<ModelProduct> productList;
+    public ArrayList<ModelProduct> filterList;
+    private FilterProduct filter;
     //public int lastPosition = -1;
 
     public AdapterProductSeller(Context context, ArrayList<ModelProduct> productList) {
         this.context = context;
         this.productList = productList;
+        this.filterList = productList;
     }
 
     @NonNull
@@ -247,6 +253,13 @@ public class AdapterProductSeller extends RecyclerView.Adapter<AdapterProductSel
         return productList.size();
     }
 
+    @Override
+    public Filter getFilter() {
+        if(filter==null){
+            filter = new FilterProduct(this,filterList);
+        }
+        return filter;
+    }
 
     class HolderProductSeller extends RecyclerView.ViewHolder{
 
