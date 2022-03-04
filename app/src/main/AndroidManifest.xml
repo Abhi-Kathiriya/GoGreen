@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GoGreen">
         <activity
+            android:name=".ShopDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.ForgotPasswordActivity"
             android:exported="false" />
         <activity

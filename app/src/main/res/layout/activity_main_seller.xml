@@ -143,25 +143,25 @@
             android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
+            android:layout_toLeftOf="@+id/filterProductBtn"
             android:background="@drawable/shape_rect06"
+            android:drawableLeft="@drawable/ic_baseline_search_24"
             android:drawablePadding="10dp"
             android:elevation="10dp"
             android:hint="Search Here..."
-            android:padding="8dp"
-            android:layout_toLeftOf="@+id/filterProductBtn"
-            android:drawableLeft="@drawable/ic_baseline_search_24" />
+            android:padding="8dp" />
 
         <ImageButton
             android:id="@+id/filterProductBtn"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:layout_marginTop="5dp"
-            android:background="@null"
-            android:scaleType="fitXY"
-            android:elevation="10dp"
-            android:src="@drawable/filterbtn"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="12dp" />
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="12dp"
+            android:background="@null"
+            android:elevation="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/filterbtn" />
 
         <TextView
             android:id="@+id/filteredProductsTv"
