@@ -6,12 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".activities.MainUserActivity">
 
+    <!--toolbar-->
     <RelativeLayout
         android:id="@+id/toolbarRl"
         android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#4B9E18">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="17dp"
+        android:id="@+id/layout5"
+        android:elevation="10dp"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark"
-        android:padding="20dp">
+        android:background="@drawable/shape_rect08">
 
         <TextView
             android:id="@+id/userNameTv"
@@ -20,7 +33,7 @@
             android:layout_marginTop="12dp"
             android:layout_toRightOf="@id/profileIv"
             android:text="User Name"
-            android:textColor="#ffffff"
+            android:textColor="#000"
             android:textSize="17sp"
             android:textStyle="bold" />
 
@@ -52,69 +65,86 @@
             android:layout_below="@id/userNameTv"
             android:layout_toRightOf="@id/profileIv"
             android:text="Email"
-            android:textColor="#ffffff" />
+            android:textColor="#000" />
 
+        <!--Products/Orders-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_rect05"
+            android:orientation="horizontal"
+            android:layout_below="@id/emailTv"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginBottom="12dp"
+            android:id="@+id/productLl">
+
+            <!--products-->
+            <TextView
+                android:id="@+id/tabShopsTv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/shape_rect04"
+                android:gravity="center"
+                android:text="Shops"
+                android:textColor="#ffffff"/>
+
+            <!--orders-->
+            <TextView
+                android:id="@+id/tabOrdersTv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Orders"
+                android:textColor="#000"/>
+
+
+        </LinearLayout>
 
     </RelativeLayout>
 
-    <LinearLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@drawable/shape_rect05"
-        android:orientation="horizontal"
-        android:layout_below="@id/toolbarRl"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginBottom="12dp"
-        android:id="@+id/productLl">
-
-        <!--products-->
-        <TextView
-            android:id="@+id/tabShopsTv"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/shape_rect04"
-            android:gravity="center"
-            android:text="Shops"
-            android:textColor="#ffffff"/>
-
-        <!--orders-->
-        <TextView
-            android:id="@+id/tabOrdersTv"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="Orders"
-            android:textColor="#000"/>
-
-
-    </LinearLayout>
-
     <RelativeLayout
         android:visibility="visible"
-        android:id="@+id/productsRl"
+        android:id="@+id/shopsRl"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/productLl">
+        android:layout_below="@+id/layout5">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/ShopsRv"
+            android:id="@+id/shopsRv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/tabShopsTv"
             android:layout_marginStart="5dp"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="7dp"
             android:layout_marginEnd="5dp"
             android:layout_marginRight="5dp"
             android:layout_marginBottom="5dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:ignore="NotSibling"
             tools:listitem="@layout/row_shop" />
+
+    </RelativeLayout>
+
+
+    <!--Orders UI-->
+    <RelativeLayout
+        android:id="@+id/ordersRl"
+        android:visibility="gone"
+        android:layout_below="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--reccyclerview: show orders(newest first)-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ordersRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:stackFromEnd="true"
+            app:reverseLayout="true"/>
 
     </RelativeLayout>
 

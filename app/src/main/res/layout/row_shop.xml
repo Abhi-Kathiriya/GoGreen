@@ -12,8 +12,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:padding="5dp"
         android:orientation="horizontal">
         <TextView
+            android:id="@+id/shopNameTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nursery shop"
@@ -22,8 +24,8 @@
             android:textSize="20dp"
             android:textStyle="bold">
 
-
         </TextView>
+
         <LinearLayout
             android:layout_width="50dp"
             android:layout_height="30dp"
@@ -55,20 +57,21 @@
 
 </LinearLayout>
     <ImageView
+        android:id="@+id/shopIv"
         android:layout_width="match_parent"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
         android:scaleType="fitXY"
         android:layout_height="180dp"
         android:src="@drawable/shop1"/>
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="8dp"
+            android:id="@+id/addressTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
             android:text="302 Apartment ,Near a temple , Main Road Anand, Gujrat"
             android:textSize="16dp"
             android:gravity="center">
