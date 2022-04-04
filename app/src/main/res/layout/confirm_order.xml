@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConfirmOrder">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+            android:text="Order To"
+            android:textSize="22dp"
+            android:textColor="@color/colorGreen"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/shopname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:layout_below="@+id/title"
+            android:text="GoGreen Nursary"
+            android:textSize="22dp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cartitemRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shopname"
+            tools:listitem="@layout/row_cart_item">
+
+        </androidx.recyclerview.widget.RecyclerView>
+        <Button
+            android:id="@+id/continueBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@color/colorPrimaryDark"
+            android:layout_below="@+id/cartitemRv"
+            android:padding="5dp"
+            android:text="Confirm Order"
+            android:textColor="@color/colorWhite"
+            android:textAllCaps="false"/>
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

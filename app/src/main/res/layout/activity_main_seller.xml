@@ -126,7 +126,7 @@
 
     <!--products-->
     <RelativeLayout
-        android:visibility="visible"
+        android:visibility="gone"
         android:id="@+id/productsRl"
         android:layout_marginTop="8dp"
         android:layout_width="match_parent"
@@ -208,7 +208,7 @@
 
     <!--orders-->
     <RelativeLayout
-        android:visibility="gone"
+        android:visibility="visible"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/ordersRl"
@@ -248,6 +248,7 @@
             app:reverseLayout="true"
             app:stackFromEnd="true"
             android:layout_margin="5dp"
+            tools:listitem="@layout/activity_row_order_seller"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
     </RelativeLayout>

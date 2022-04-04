@@ -16,15 +16,15 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp"
-        android:layout_marginTop="17dp"
         android:id="@+id/layout5"
-        android:elevation="10dp"
-        android:padding="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/shape_rect08">
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/shape_rect08"
+        android:elevation="10dp"
+        android:padding="10dp">
 
         <TextView
             android:id="@+id/userNameTv"
@@ -69,16 +69,16 @@
 
         <!--Products/Orders-->
         <LinearLayout
+            android:id="@+id/productLl"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="@drawable/shape_rect05"
-            android:orientation="horizontal"
             android:layout_below="@id/emailTv"
             android:layout_marginLeft="35dp"
             android:layout_marginTop="25dp"
             android:layout_marginRight="35dp"
             android:layout_marginBottom="12dp"
-            android:id="@+id/productLl">
+            android:background="@drawable/shape_rect05"
+            android:orientation="horizontal">
 
             <!--products-->
             <TextView
@@ -89,7 +89,7 @@
                 android:background="@drawable/shape_rect04"
                 android:gravity="center"
                 android:text="Shops"
-                android:textColor="#ffffff"/>
+                android:textColor="#ffffff" />
 
             <!--orders-->
             <TextView
@@ -99,7 +99,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="Orders"
-                android:textColor="#000"/>
+                android:textColor="#000" />
 
 
         </LinearLayout>
@@ -107,7 +107,7 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:visibility="visible"
+        android:visibility="gone"
         android:id="@+id/shopsRl"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -134,8 +134,9 @@
     <!--Orders UI-->
     <RelativeLayout
         android:id="@+id/ordersRl"
-        android:visibility="gone"
-        android:layout_below="@+id/toolbarRl"
+        android:visibility="visible"
+        android:layout_marginTop="4dp"
+        android:layout_below="@+id/layout5"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <!--reccyclerview: show orders(newest first)-->
@@ -143,8 +144,10 @@
             android:id="@+id/ordersRv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:reverseLayout="true"
+
             app:stackFromEnd="true"
-            app:reverseLayout="true"/>
+            tools:listitem="@layout/activity_row_order_seller" />
 
     </RelativeLayout>
 

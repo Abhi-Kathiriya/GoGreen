@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/itemTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="plant name"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/PriceTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="₹399"
+        android:textColor="@color/colorBlack" />
+    <TextView
+        android:id="@+id/quantitytv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(2)"
+        android:layout_toRightOf="@+id/PriceTv"
+        android:textColor="#000"
+        />
+    <ImageButton
+        android:id="@+id/removeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:background="@null"
+        android:src="@drawable/ic_outline_indeterminate_check_box_24"
+        android:textColor="@color/colorRed"
+        android:layout_alignParentRight="true" />
+
+</RelativeLayout>
