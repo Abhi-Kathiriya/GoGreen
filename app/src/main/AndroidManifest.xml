@@ -15,6 +15,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GoGreen">
+        <activity android:name=".activities.ProfileEditUserActivity"></activity>
+        <activity android:name=".activities.ShopReviewsActivity" />
+        <activity android:name=".activities.WriteReviewActivity" />
+        <activity android:name=".activities.OrderDetailsSellerActivity" />
+        <activity android:name=".activities.OrderDetailsUsersActivity" />
         <activity
             android:name=".activities.ShopDetailsActivity"
             android:exported="false" />

@@ -248,7 +248,7 @@
             app:reverseLayout="true"
             app:stackFromEnd="true"
             android:layout_margin="5dp"
-            tools:listitem="@layout/activity_row_order_seller"
+            tools:listitem="@layout/row_order"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
     </RelativeLayout>

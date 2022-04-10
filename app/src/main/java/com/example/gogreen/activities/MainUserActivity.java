@@ -16,7 +16,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.gogreen.R;
+import com.example.gogreen.adapter.AdapterOrderUser;
 import com.example.gogreen.adapter.AdapterShop;
+import com.example.gogreen.models.ModelOrderUser;
 import com.example.gogreen.models.ModelShop;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -42,7 +44,8 @@ public class MainUserActivity extends AppCompatActivity {
 
     private ArrayList<ModelShop> shopsList;
     private AdapterShop adapterShop;
-
+    private ArrayList<ModelOrderUser>orderUserList;
+    private AdapterOrderUser adapterOrderUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,15 +62,19 @@ public class MainUserActivity extends AppCompatActivity {
         profileIv = findViewById(R.id.profileIv);
         shopsRl = findViewById(R.id.shopsRl);
         ordersRl = findViewById(R.id.ordersRl);
+        ordersRv = findViewById(R.id.ordersRv);
         shopsRv = findViewById(R.id.shopsRv);
         logoutBtn = findViewById(R.id.logoutBtn);
 
-        loadMyInfo();
+        checkUser();
+
+        showShopsUI();
+        //loadOrders();
 
         profileIv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //startActivity(new Intent(MainUserActivity.this,ProfileEditUserActivity.class));
+                startActivity(new Intent(MainUserActivity.this,ProfileEditUserActivity.class));
             }
         });
 
@@ -148,6 +155,7 @@ public class MainUserActivity extends AppCompatActivity {
 
                             //load only those shops that are in the city of user
                             loadShops(city);
+                            loadOrders();
                         }
                     }
 
@@ -191,6 +199,53 @@ public class MainUserActivity extends AppCompatActivity {
 
                     }
                 });
+    }
+
+    private void loadOrders() {
+        //init order list
+        orderUserList = new ArrayList<>();
+
+        //get orders
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Users");
+        ref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                orderUserList.clear();
+                for (DataSnapshot ds: dataSnapshot.getChildren()){
+                    String uid = ""+ds.getRef().getKey();
+
+                    DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Users").child(uid).child("Orders");
+                    ref.orderByChild("orderBy").equalTo(firebaseAuth.getUid())
+                            .addValueEventListener(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                    if(dataSnapshot.exists()){
+                                        for (DataSnapshot ds: dataSnapshot.getChildren()){
+                                            ModelOrderUser modelOrderUser = ds.getValue(ModelOrderUser.class);
+
+                                            //add to list
+                                            orderUserList.add(modelOrderUser);
+                                        }
+                                        //setup adapter
+                                        adapterOrderUser = new AdapterOrderUser(MainUserActivity.this, orderUserList);
+                                        //set to recycleview
+                                        ordersRv.setAdapter(adapterOrderUser);
+                                    }
+                                }
+
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                                }
+                            });
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
     }
 
     private void showShopsUI() {

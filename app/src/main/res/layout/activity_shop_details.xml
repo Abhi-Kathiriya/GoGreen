@@ -66,19 +66,24 @@
                 android:id="@+id/openCloseTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="45dp"
+                android:layout_alignParentRight="true"
                 android:layout_marginTop="20dp"
-                android:layout_toRightOf="@+id/addressTv"
+                android:layout_marginRight="30dp"
                 android:src="@drawable/open">
             </ImageView>
 
-<!--            <RatingBar-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_below="@+id/shopStatus"-->
-<!--                android:layout_marginTop="73dp"-->
-<!--                android:backgroundTint="#FFEB3B"-->
-<!--                android:rating="5" />-->
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_below="@+id/openCloseTv"
+                android:progressBackgroundTint="#FFFF00"
+                android:progressTint="#FFFF00"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:rating="5" />
 
             <TextView
                 android:id="@+id/phoneTv"

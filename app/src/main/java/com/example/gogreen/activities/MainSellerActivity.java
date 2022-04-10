@@ -24,7 +24,9 @@ import android.widget.TextView;
 
 import com.example.gogreen.R;
 import com.example.gogreen.Constants;
+import com.example.gogreen.adapter.AdapterOrderShop;
 import com.example.gogreen.adapter.AdapterProductSeller;
+import com.example.gogreen.models.ModelOrderShop;
 import com.example.gogreen.models.ModelProduct;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
@@ -55,6 +57,8 @@ public class MainSellerActivity extends AppCompatActivity {
 
     private ArrayList<ModelProduct> productList;
     private AdapterProductSeller adapterProductSeller;
+    private ArrayList<ModelOrderShop> orderShopArrayList;
+    private AdapterOrderShop adapterOrderShop;
 
 
     @Override
@@ -91,6 +95,7 @@ public class MainSellerActivity extends AppCompatActivity {
         loadMyInfo();
         loadAllProducts();
         showProductsUI();
+        loadAllOrders();
 
         logoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -119,6 +124,15 @@ public class MainSellerActivity extends AppCompatActivity {
             }
         });
 
+        reviewsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainSellerActivity.this, ShopReviewsActivity.class);
+                intent.putExtra("shopUid",""+firebaseAuth.getUid());
+                startActivity(intent);
+            }
+        });
+
         //search
         searchProductEt.addTextChangedListener(new TextWatcher() {
             @Override
@@ -139,6 +153,30 @@ public class MainSellerActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {
 
+            }
+        });
+
+        filterOrderBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final String[] options = {"All", "In Progress", "Completed", "Cancelled"};
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainSellerActivity.this);
+                builder.setTitle("Filter Orders:")
+                        .setItems(options, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                if(which==0){
+                                    filteredOrdersTv.setText("Showing All Orders");
+                                    adapterOrderShop.getFilter().filter("");
+                                }
+                                else{
+                                    String optionClicked = options[which];
+                                    filteredOrdersTv.setText("Showing " +optionClicked+ " Orders");
+                                    adapterOrderShop.getFilter().filter(optionClicked);
+                                }
+                            }
+                        })
+                        .show();
             }
         });
 
@@ -196,6 +234,37 @@ public class MainSellerActivity extends AppCompatActivity {
                         .show();
             }
         });
+    }
+
+    private void loadAllOrders() {
+        //init array list
+        orderShopArrayList = new ArrayList<>();
+        //load orders of shop
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Users");
+        ref.child(firebaseAuth.getUid()).child("Orders")
+                .addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        //clear list before adding new data in it
+                        orderShopArrayList.clear();
+                        for (DataSnapshot ds: dataSnapshot.getChildren()){
+                            ModelOrderShop modelOrderShop = ds.getValue(ModelOrderShop.class);
+                            //add to list
+                            orderShopArrayList.add(modelOrderShop);
+
+                        }
+                        //setup adapter
+                        adapterOrderShop = new AdapterOrderShop(MainSellerActivity.this,orderShopArrayList);
+                        //set adapter to recyclerview
+                        ordersRv.setAdapter(adapterOrderShop);
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
     }
 
     private void checkUser() {

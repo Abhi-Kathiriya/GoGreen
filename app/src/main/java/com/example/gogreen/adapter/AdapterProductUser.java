@@ -172,7 +172,7 @@ public class AdapterProductUser extends RecyclerView.Adapter<com.example.gogreen
         quantityTv.setText(""+quantity);
         originalPriceTv.setText("₹"+modelProduct.getOriginalPrice());
         priceDiscountedTv.setText("₹"+modelProduct.getDiscountPrice());
-        finalPriceTv.setText("Total: ₹"+finalCost);
+        finalPriceTv.setText(""+finalCost);
 
         final AlertDialog dialog = builder.create();
         dialog.show();
@@ -184,7 +184,7 @@ public class AdapterProductUser extends RecyclerView.Adapter<com.example.gogreen
                 finalCost = finalCost + cost;
                 quantity++;
 
-                finalPriceTv.setText("Total: ₹"+finalCost);
+                finalPriceTv.setText(""+finalCost);
                 quantityTv.setText(""+quantity);
             }
         });
@@ -197,26 +197,28 @@ public class AdapterProductUser extends RecyclerView.Adapter<com.example.gogreen
                     finalCost = finalCost - cost;
                     quantity --;
 
-                    finalPriceTv.setText("Total: ₹"+finalCost);
+                    finalPriceTv.setText(""+finalCost);
                     quantityTv.setText(""+quantity);
                 }
             }
         });
 
-//        continueBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                String title = titleTv.getText().toString().trim();
-//                String priceEach = price;
-//                String totalPrice = finalPriceTv.getText().toString().trim().replace("₹","");
-//                String quantity = quantityTv.getText().toString().trim();
-//
-//                //add to db(SQLite)
-//                addToCart(productId, title, priceEach, totalPrice, quantity);
-//
-//                dialog.dismiss();
-//            }
-//        });
+        continueBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String title = titleTv.getText().toString().trim();
+                String priceEach = price;
+                String totalPrice = finalPriceTv.getText().toString().trim().replace("₹","");
+                String quantity = quantityTv.getText().toString().trim();
+
+                //Toast.makeText(context, ""+title, Toast.LENGTH_SHORT).show();
+
+                //add to db(SQLite)
+                addToCart(productId, title, priceEach, totalPrice, quantity);
+
+                dialog.dismiss();
+            }
+        });
     }
 
     private int itemId = 1;
